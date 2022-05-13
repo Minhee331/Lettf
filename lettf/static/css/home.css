@@ -1,5 +1,65 @@
+/* set */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* font */
+@font-face {
+    font-family: 'LeferiPoint-WhiteA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LeferiPoint-BlackA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LeferiBaseType-RegularA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-RegularA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'YUniverse-L';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_yuniverse@1.0/YUniverse-L.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'YdestreetL';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/YdestreetL.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mongdol';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_08@1.0/Mongdol.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .main-container {
-    margin: 30px 300px;
+    margin-top: 60px;
 }
 
 .content-container {
@@ -7,10 +67,196 @@
 }
 
 .white-container {
-    display: flex;
+    margin: 0 300px;
 }
 
+/* nav */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-nav {
+    width: 70px;
+}
+
+.about-container a {
+    font-family: LeferiPoint-WhiteA;
+    font-size: 15px;
+    color: #626d70;
+}
+
+/* white-content */
 .white-content-container {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 80px 0;
+}
+
+.slogan-container {
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+    font-family: 'LeferiBaseType-RegularA';
+    font-size: 48px;
+}
+
+.slogan-container p {
+    color: #2a2922;
+}
+
+/* .margin-decrease {
+    margin: -135px 0;
+} */
+
+.slogan-mongdol {
+    font-family: 'Mongdol';
+    font-size: 80px;
+}
+
+.slogan-yuniverse {
+    font-family: 'YUniverse-L';
+    font-size: 50px;
+}
+
+.slogan-leferi {
+    font-family: 'LeferiPoint-BlackA';
+    font-size: 18px;
+    color: rgba(98, 109, 112, 0.54);
+    /* margin-top: -40px; */
+    margin-top: 10px;
+    margin-bottom: 40px;
+    margin-left: 30px;
+}
+
+.go-button {
+    width: 140px;
+    height: 33px;
+    border: none;
+    border-radius: 20px;
+    background-color: #2a2922;
+    font-family: 'LeferiPoint-WhiteA';
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.icon_letter {
+    width: 240px;
+    margin-bottom: 40px;
+}
+
+/* yellow-container */
+.yellow-container {
+    background-color: rgba(243, 238, 231, 0.42);
+    background-image:url(../img/hand_blur.png);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: 70% -20px;
+}
+
+.yellow-content-container {
+    margin: 0 300px;
+    padding: 30px 0;
+}
+
+.introduction-title-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.introduction-title {
+    display: inline-block;
+    font-family: 'LeferiPoint-WhiteA';
+    font-size: 30px;
+    color: #626d70;
+}
+
+.upper-bar {
+    font-family: 'YdestreetL';
+    margin-left: 2px;
+}
+
+.title {
+    margin: -15px 0 -19px 0;
+}
+
+.lower-bar {
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: flex-end;
+    font-family: 'YdestreetL';
+}
+
+.introduction-content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.introduction-content {
+    font-family: 'LeferiPoint-WhiteA';
+    font-size: 17px;
+}
+
+.logo-blur {
+    width: 160px;
+    margin-right: 110px;
+}
+
+/* footer */
+.footer-container {
+    background-color: #626d70;
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    color: #ffffff;
+}
+
+.footer-content-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 300px;
+    padding: 25px 0 15px 0;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer-title {
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.footer-body {
+    font-size: 9px;
+}
+
+.logo-footer {
+    width: 35px;
+    margin-top: 20px;
+}
+
+.sns-icons {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.instagram-icon {
+    width: 12px;
+}
+
+.twitter-icon {
+    width: 13px;
+    margin-left: 34px;
+}
+
+.facebook-icon {
+    width: 6px;
+    margin-left: 38px;
 }
