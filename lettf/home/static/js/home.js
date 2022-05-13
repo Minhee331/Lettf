@@ -36,10 +36,9 @@ window.onload = function () {
                     mimeType: "multipart/form-data",
                     data: file_data,
                     success: function (res) {
-                        // location.href = '/project/team_detail/'+project_id;
-                        // console.log()
-                        console.log(res)
-                        resolve(res)
+                        result = JSON.parse(res)
+                        console.log(result['success'])
+                        resolve(result['success'])
                     },
                     error: function (request, status, error) {
                         alert("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);

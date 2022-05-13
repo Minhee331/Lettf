@@ -49,5 +49,7 @@ def upload(request):
     # "/home/lettf/lettf/lettf/static/img",
     # arguments=arguments
     # )
-    img_txt=123
-    return JsonResponse(img_txt)
+    essence = {
+    'success':123
+    }
+    return JsonResponse(essence)
