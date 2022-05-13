@@ -1,0 +1,16 @@
+.main-container {
+    margin: 30px 300px;
+}
+
+.content-container {
+    
+}
+
+.white-container {
+    display: flex;
+}
+
+.white-content-container {
+    display: flex;
+    flex-direction: row;
+}
