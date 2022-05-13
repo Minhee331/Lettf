@@ -63,7 +63,6 @@ window.onload = function () {
 // }
 
 function previewFiles() {
-    // move();
     var text = document.querySelector('#upload-text');
     var preview = document.querySelector('#preview');
     var files = document.querySelector('input[type=file]').files;
