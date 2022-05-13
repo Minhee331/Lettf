@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lettf</title>
+    <script type="text/javascript" src="{% static 'js/home.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" type="text/css">
+</head>
+<body>
+    <main class="main-container">
+        <div class="content-container">
+            <div class="white-container">
+                <div class="nav-container">
+                    <div>
+                        <img class="logo-nav" src="{% static 'img/logo_nav.png' %}" alt="">
+                    </div>
+                    
+                    <div>
+                        <a href="">ABOUT</a>
+                    </div>
+                </div>
+
+                <div class="white-content-container">
+                    <div>
+                        <div>
+                            <p>기억 속</p>
+                            <p>편지</p>
+                            <p>에서</p>
+                        </div>
+    
+                        <div>
+                            <p>추억이 담긴</p>
+                            <p>폰트</p>
+                            <p>로</p>
+                        </div>
+    
+                        <div>
+                            <p>편지 n장으로 폰트를 만들고 원하는 문구를 써 보세요!</p>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <!-- ICON (WORKING) -->
+                    </div>
+    
+                    <div>
+                        <input type="button" value="지금 바로 만들기">
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <div>
+                        <p>-</p>
+                        <p>디지털 편지로 되살아난 아날로그 편지</p>
+                        <p>-</p>
+                    </div>
+                    
+                    <div>
+                        <div>
+                            <p>브랜드 설명이 들어갑니다. 브랜드 설명이 들어갑니다. 브랜드 설명이 들어갑니다.</p>
+                            <p>브랜드 설명이 들어갑니다. 브랜드 설명이 들어갑니다. 브랜드 설명이 들어갑니다.</p>
+                            <p>브랜드 설명이 들어갑니다. 브랜드 설명이 들어갑니다. 브랜드 설명이 들어갑니다.</p>
+                        </div>
+
+                        <div>
+                            <!-- blurr logo -->
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <p>STEP1. FILE UPLOAD</p>
+                    </div>
+    
+                    <div>
+                        <form method="POST" action="{% url 'upload' %}" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <img id="upload-img-1" src="#" style="display: none;">
+                            <img id="upload-img-2" src="#" style="display: none;">
+                            <input type="file" name="imgs" onchange="readURL(this);" multiple>
+                            <input type="submit" value="작성하기">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div>
+                <p>FOOTER</p>
+                <p>Footer Footer Footer Footer Footer Footer Footer Footer</p>
+                <p>Footer Footer Footer Footer Footer Footer Footer Footer</p>
+                <!-- footer-logo -->
+            </div>
+
+            <div>
+                <p>TEAM</p>
+                <p>팀원 소개 팀원 소개 팀원 소개 팀원 소개 팀원 소개 팀원 소개</p>
+                <p>팀원 소개 팀원 소개 팀원 소개 팀원 소개 팀원 소개 팀원 소개</p>
+                <div>
+                    <!-- instagram -->
+                    <!-- twitter -->
+                    <!-- facebook -->
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
