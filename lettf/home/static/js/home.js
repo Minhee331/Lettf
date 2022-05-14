@@ -55,8 +55,9 @@ window.onload = function () {
                 $("#download-img").attr('href' , '/static/img/'+values[1]['img_txt'][0]);
                 $("#download-img").attr('download' , 'myTTF');
                 $("#download-img").get(0).click();
-                $("#download-font").attr('href' , '/static/img/'+values[0]);
-                $("#download-font").attr('download' , 'myTTF');
+                // console.log(values[0]);
+                $("#download-font").attr('href' , '/static/img/'+values[1]['ttf_txt']);
+                $("#download-font").attr('download');
                 var newStyle = document.createElement('style');
                 newStyle.appendChild(document.createTextNode("\
                 @font-face {\
@@ -119,7 +120,7 @@ function move() {
         var elem = document.getElementById("myBar");
         // var per = $("#myBar-txt");
         var width = 1;
-        var id = setInterval(frame, 1000);
+        var id = setInterval(frame, 800);
         function frame() {
             if (width >= 99) {
                 clearInterval(id);
