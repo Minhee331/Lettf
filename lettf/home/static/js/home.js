@@ -7,6 +7,7 @@ window.onload = function () {
         e.preventDefault();  //stop the browser from following
         window.location.href = '/static/img/example.ttf';
     });
+
     $('#submit-btn').on("click", function () {
         var file_data = new FormData();
         var files = document.querySelector('input[type=file]').files;
@@ -51,9 +52,9 @@ window.onload = function () {
                 $('#step-3').css('display', 'block');
                 $("#img_form_url").attr("src", values[1]);
             })
-            .catch(function (error) {
-                console.log(error);
-            });
+                .catch(function (error) {
+                    console.log(error);
+                });
         }
     });
 }

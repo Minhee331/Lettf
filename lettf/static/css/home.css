@@ -7,7 +7,16 @@
 a {
     text-decoration: none;
 }
+#step-2 {
+    width: 100%;
+    background-color: grey;
+}
 
+#myBar {
+    width: 1%;
+    height: 30px;
+    background-color: green;
+}
 /* font */
 @font-face {
     font-family: 'LeferiPoint-WhiteA';

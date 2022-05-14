@@ -81,21 +81,33 @@
                 </div>
 
                 <div class="yellow-content-container">
-                    <div>
-                        <p>STEP1. FILE UPLOAD</p>
-                    </div>
+                    <div class="step1-container" id="step-1">
+                        <div class="step1-input-container">
+                            <div>
+                                <div class="step1-title">
+                                    <p>Step1. File Upload</p>
+                                </div>
+        
+                                <div class="step1-upload-container">
+                                    <div id="preview"></div>
+                                    <input type="file" id="imgs-upload" onchange="previewFiles()" accept='image/jpeg,image/png'
+                                        style="display:none;" multiple>
+                                    <label for="imgs-upload" name='imgs' id="upload-text">파일 업로드</label>
+                                </div>
+                            </div>
+    
+                            <div class="sentence-container">
+                                <div class="sentence-title">
+                                    <p>한 문장을 적어 이미지로 만들어드려요</p>
+                                </div>
+    
+                                <textarea class="sentence-box" id="user-txt"
+                                    placeholder="이미지로 보고 싶은 문장을 입력해주세요&#13;&#10;(없다면 기본문장이 출력됩니다)"></textarea>
+                            </div>
+                        </div>
 
-                    <div id="step-1">
-                        <div id="preview"></div>
-                        <input type="file" id="imgs-upload" onchange="previewFiles()" accept='image/jpeg,image/png'
-                            style="display:none;" multiple>
-                        <label for="imgs-upload" name='imgs' id="upload-text">파일 업로드</label>
-                        <input type="button" id="submit-btn" value="작성하기">
-                        <input type="button" id="download" value="다운로드">
-
-                        <div>
-                            <textarea id="user-txt"
-                                placeholder="이미지로 보고 싶은 문장을 입력해주세요&#13;&#10;(없다면 기본문장이 출력됩니다)"></textarea>
+                        <div class="upload-btn-container">
+                            <input class="upload-btn" type="button" id="submit-btn" value="업로드 완료">
                         </div>
                     </div>
                     
@@ -104,7 +116,8 @@
                     </div>
 
                     <div id="step-3" style="display: none;">
-                        <img src="#" id="rlt-img">
+                        <!-- <img src="#" id="rlt-img"> -->
+                        <input type="button" id="download" value="다운로드">
                     </div>
                 </div>
             </div>
