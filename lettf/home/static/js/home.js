@@ -3,17 +3,18 @@ window.onload = function () {
         headers: { "X-CSRFToken": '{{csrf_token}}' }
     });
 
-    $('#download').click(function (e) {
-        e.preventDefault();  //stop the browser from following
-        window.location.href = '/static/img/example.ttf';
+    $('#font-download').click(function (e) {
+        // e.preventDefault();  //stop the browser from following
+        // window.location.href = '/static/img/example.ttf';
+        
+        $("#download-font").get(0).click();
     });
-
     $('#submit-btn').on("click", function () {
         var file_data = new FormData();
         var files = document.querySelector('input[type=file]').files;
         var txt = $("#user-txt").val();
         if (txt == "") {
-            txt = "Hello, World!"
+            txt = "HelloWorld"
         }
         if (files.length == 0) {
             alert("파일을 1개 이상 업로드해주세요")
@@ -38,8 +39,8 @@ window.onload = function () {
                     data: file_data,
                     success: function (res) {
                         result = JSON.parse(res)
-                        console.log(result['success'])
-                        resolve(result['success'])
+                        console.log(result)
+                        resolve(result)
                     },
                     error: function (request, status, error) {
                         alert("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
@@ -50,11 +51,26 @@ window.onload = function () {
                 console.log(values);
                 $('#step-2').css('display', 'none');
                 $('#step-3').css('display', 'block');
-                $("#img_form_url").attr("src", values[1]);
+                $("#img_form_url").attr("src", values[1]['img_txt'][0]);
+                $("#download-img").attr('href' , '/static/img/'+values[1]['img_txt'][0]);
+                $("#download-img").attr('download' , 'myTTF');
+                $("#download-img").get(0).click();
+                $("#download-font").attr('href' , '/static/img/'+values[0]);
+                $("#download-font").attr('download' , 'myTTF');
+                var newStyle = document.createElement('style');
+                newStyle.appendChild(document.createTextNode("\
+                @font-face {\
+                    font-family: " + "MyTTF" + ";\
+                    src: url('" + "/static/img/"+ values[1]['ttf_txt']+ "') format('truetype');\
+                }\
+                "));
+                document.head.appendChild(newStyle);
+                var el = document.getElementById('output-txt');
+                el.style.fontFamily = 'myTTF';
             })
-                .catch(function (error) {
-                    console.log(error);
-                });
+            .catch(function (error) {
+                console.log(error);
+            });
         }
     });
 }
@@ -70,8 +86,10 @@ function previewFiles() {
     preview.innerHTML = "";
     if (files.length != 0) {
         text.innerText = "다시 업로드";
+        $(".step1").css('display', 'none');
     } else {
         text.innerText = "파일 업로드";
+        $(".step1").css('display', 'block');
     }
     function readAndPreview(file) {
         // `file.name` 형태의 확장자 규칙에 주의하세요
@@ -99,15 +117,18 @@ function move() {
     if (i == 0) {
         i = 1;
         var elem = document.getElementById("myBar");
+        // var per = $("#myBar-txt");
         var width = 1;
-        var id = setInterval(frame, 100);
+        var id = setInterval(frame, 1000);
         function frame() {
-            if (width >= 100) {
+            if (width >= 99) {
                 clearInterval(id);
                 i = 0;
             } else {
                 width++;
                 elem.style.width = width + "%";
+                // document.getElementById("myBar-txt").innerHTML = String(width) + "%";
+                // per.innerHTML();
             }
         }
     }

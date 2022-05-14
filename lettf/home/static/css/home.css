@@ -9,13 +9,17 @@ a {
 }
 #step-2 {
     width: 100%;
-    background-color: grey;
+    border-radius: 13.5px;
+    box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
 }
 
 #myBar {
     width: 1%;
     height: 30px;
-    background-color: green;
+    border-radius: 13.5px;
+    box-shadow: 0 0 17px 0 rgba(0, 0, 0, 0.16);
+    background-color: #626d70;
 }
 /* font */
 @font-face {
@@ -110,6 +114,8 @@ a {
     align-items: baseline;
     font-family: 'LeferiBaseType-RegularA';
     font-size: 48px;
+    text-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+    color: #2a2922;
 }
 
 .slogan-container p {
@@ -123,11 +129,15 @@ a {
 .slogan-mongdol {
     font-family: 'Mongdol';
     font-size: 80px;
+    text-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+    color: #2a2922;
 }
 
 .slogan-yuniverse {
     font-family: 'YUniverse-L';
     font-size: 50px;
+    text-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+    color: #2a2922;
 }
 
 .slogan-leferi {
@@ -138,6 +148,7 @@ a {
     margin-top: 10px;
     margin-bottom: 40px;
     margin-left: 30px;
+    text-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
 }
 
 .go-button {
@@ -149,6 +160,12 @@ a {
     font-family: 'LeferiPoint-WhiteA';
     font-size: 14px;
     color: #ffffff;
+    text-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+.go-button:hover {
+    cursor: pointer;
 }
 
 .icon_letter {
@@ -181,6 +198,7 @@ a {
     font-family: 'LeferiPoint-WhiteA';
     font-size: 30px;
     color: #626d70;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.16);
 }
 
 .upper-bar {
@@ -208,6 +226,8 @@ a {
 .introduction-content {
     font-family: 'LeferiPoint-WhiteA';
     font-size: 17px;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.16);
+    color: #626d70;
 }
 
 .logo-blur {
@@ -218,6 +238,8 @@ a {
 .step1-title {
     font-family: 'LeferiPoint-WhiteObliqueA';
     font-size: 17px;
+    color: #626d70;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.16);
 }
 
 .step1-container {
@@ -230,12 +252,70 @@ a {
 }
 
 .step1-upload-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 570px;
     height: 150px;
     border-radius: 12px;
     box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.16);
     background-color: #ffffff;
     margin-top: 5px;
+}
+
+#preview img {
+    width: 100px;
+    object-fit: cover;
+    border-radius: 19px;
+    box-shadow: 0 0 26px 0 rgba(0, 0, 0, 0.16);
+    background-color: #fff;
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+
+.description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mail-icon {
+    width: 25px;
+    margin-bottom: 6px;
+}
+
+.upload-description1 {
+    font-family: 'LeferiPoint-WhiteA';
+    font-size: 12px;
+    margin-bottom: 2px;
+    color: #626d70;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.16);
+}
+
+.upload-description2 {
+    font-family: 'LeferiPoint-WhiteA';
+    font-size: 8px;
+    margin-bottom: 8px;
+    color: #626d70;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.16);
+}
+
+.file-upload-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85px;
+    height: 22px;
+    border-radius: 13.5px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #626d70;
+}
+
+.file-upload-btn {
+    font-family: 'LeferiPoint-WhiteA';
+    font-size: 10px;
+    color: #ffffff;
 }
 
 .sentence-container {
@@ -249,6 +329,8 @@ a {
     padding-bottom: 4px;
     margin-bottom: 9px;
     margin-top: -9px;
+    color: #626d70;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.16);
 }
 
 .sentence-box {
@@ -256,10 +338,17 @@ a {
     height: 130px;
     border-radius: 10px;
     border: solid 1px rgba(112, 112, 112, 0.4);
-    background-color: rgba(243, 238, 231, 0.42);
+    background-color: transparent;
     font-family: 'LeferiPoint-WhiteA';
     font-size: 14px;
     padding: 10px;
+    resize: none;
+    color: #626d70;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.16);
+}
+
+.sentence-box:focus {
+    outline: none;
 }
 
 .upload-btn-container {
@@ -279,6 +368,82 @@ a {
     font-family: 'LeferiPoint-WhiteA';
     font-size: 12px;
     color: #ffffff;
+}
+
+.step3-title1 {
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: #626d70;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.16);
+}
+
+.step3-title2 {
+    width: 99.5%;
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    font-size: 16px;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.4);
+    color: #626d70;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.16);
+}
+
+.step3-input {
+    border: solid 1px rgba(112, 112, 112, 0.4);
+    width: 97%;
+    height: 120px;
+    resize: none;
+    font-family: 'LeferiPoint-WhiteA';
+    font-size: 16px;
+    color: #626d70;
+    background-color: transparent;
+    padding: 10px;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.16);
+}
+
+.step3-input:focus {
+    outline: none;
+}
+
+.download-btn {
+    width: 138px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #2a2922;
+    color: #ffffff;
+    font-family: 'LeferiPoint-WhiteA';
+    font-size: 14px;
+}
+
+.download-btn:focus {
+    cursor: pointer;
+}
+
+.return-btn {
+    width: 138px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: #626d70;
+    color: #ffffff;
+    font-family: 'LeferiPoint-WhiteA';
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+.return-btn:focus {
+    cursor: pointer;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: -20px;
 }
 
 /* footer */
@@ -308,6 +473,11 @@ a {
 
 .footer-body {
     font-size: 9px;
+}
+
+.footer-body-small {
+    font-size: 9px;
+    opacity: 0.7;
 }
 
 .logo-footer {
